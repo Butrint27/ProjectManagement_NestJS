@@ -17,6 +17,7 @@ import { Task } from './task/entities/task.entity';
 import { ProjectMember } from './project_member/entities/project_member.entity';
 import { Project } from './project/entities/project.entity';
 import { User } from './user/entities/user.entity';
+import { Comment } from './comment/entities/comment.entity'
 
 @Module({
   imports: [
