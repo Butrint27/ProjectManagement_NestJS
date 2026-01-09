@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
 import { Organization } from '../../organization/entities/organization.entity';
 import { ProjectMember } from '../../project_member/entities/project_member.entity';
 import { Board } from '../../board/entities/board.entity';
@@ -25,6 +25,7 @@ export class Project {
   status: ProjectStatus;
 
   @ManyToOne(() => Organization, (organization) => organization.projects)
+  @JoinColumn({ name: 'organizationId' })
   organization: Organization;
 
   @OneToMany(() => ProjectMember, (projectMember) => projectMember.project)
