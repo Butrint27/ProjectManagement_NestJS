@@ -5,5 +5,5 @@ export class CreateBoardDto {
     name: string;
 
     @ApiProperty()
-    project: number;
+    projectId: number;
 }
