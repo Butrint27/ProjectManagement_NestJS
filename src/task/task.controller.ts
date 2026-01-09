@@ -14,7 +14,7 @@ export class TaskController {
 
   @Get()
   findAll() {
-    return this.taskService.findAll();
+    return this.taskService.find();
   }
 
   @Get(':id')
