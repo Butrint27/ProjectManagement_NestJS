@@ -17,8 +17,11 @@ export class User {
   @Column()
   username: string;
 
-  @Column()
+  @Column({ unique: true })
   email: string;
+
+  @Column()
+  password: string;
 
   @Column({
     type: 'enum',
@@ -27,7 +30,7 @@ export class User {
   })
   role: UserRole;
 
-  // Relationships
+  // Relations
   @OneToMany(() => ProjectMember, (projectMember) => projectMember.user)
   projectMemberships: ProjectMember[];
 
@@ -37,4 +40,5 @@ export class User {
   @OneToMany(() => Comment, (comment) => comment.user)
   comments: Comment[];
 }
+
 

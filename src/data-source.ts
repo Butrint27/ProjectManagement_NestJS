@@ -1,7 +1,6 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import * as dotenv from 'dotenv';
-
 import { User } from './user/entities/user.entity';
 import { Project } from './project/entities/project.entity';
 import { ProjectMember } from './project_member/entities/project_member.entity';
